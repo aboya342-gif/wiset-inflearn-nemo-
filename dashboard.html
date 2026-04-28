@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemo Real Estate Analytics Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --accent-color: #38bdf8;
+            --secondary-color: #818cf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.15) 0px, transparent 50%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .update-time {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* KPI Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .kpi-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .kpi-unit {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-left: 0.25rem;
+        }
+
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .chart-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out backwards;
+        }
+
+        .chart-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chart-title::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Nemo Real Estate Analytics</h1>
+                <p class="update-time">브라우저 보안 제약이 없는 내장 데이터 모드</p>
+            </div>
+            <div style="text-align: right;">
+                <span style="background: rgba(56, 189, 248, 0.1); color: var(--accent-color); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(56, 189, 248, 0.2);">
+                    Offline Ready
+                </span>
+            </div>
+        </header>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+            <div class="kpi-card" style="animation-delay: 0.1s;">
+                <div class="kpi-label">전체 수집 매물</div>
+                <div class="kpi-value" id="total-items">0</div>
+                <div class="kpi-unit">건</div>
+            </div>
+            <div class="kpi-card" style="animation-delay: 0.2s;">
+                <div class="kpi-label">평균 보증금</div>
+                <div class="kpi-value" id="avg-deposit">0</div>
+            </div>
+            <div class="kpi-card" style="animation-delay: 0.3s;">
+                <div class="kpi-label">평균 월세</div>
+                <div class="kpi-value" id="avg-rent">0</div>
+                <div class="kpi-unit">만원</div>
+            </div>
+            <div class="kpi-card" style="animation-delay: 0.4s;">
+                <div class="kpi-label">평균 관리비</div>
+                <div class="kpi-value" id="avg-mfee">0</div>
+                <div class="kpi-unit">만원</div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-grid">
+            <div class="chart-card" style="animation-delay: 0.5s;">
+                <div class="chart-title">업종 대분류별 분포</div>
+                <div id="biz-chart"></div>
+            </div>
+            <div class="chart-card" style="animation-delay: 0.6s;">
+                <div class="chart-title">주요 역세권 매물 순위</div>
+                <div id="station-chart"></div>
+            </div>
+            <div class="chart-card" style="animation-delay: 0.7s;">
+                <div class="chart-title">월세 가격대별 분포 (만원)</div>
+                <div id="rent-range-chart"></div>
+            </div>
+            <div class="chart-card" style="animation-delay: 0.8s;">
+                <div class="chart-title">요일별 매물 등록 현황</div>
+                <div id="day-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 데이터 직접 주입 (CORS 문제 해결)
+        const dashboardData = {
+            "total_items": 677,
+            "avg_deposit": 68787075.0,
+            "avg_rent": 5335.0,
+            "avg_maintenance": 605.0,
+            "biz_distribution": {
+                "기타업종": 326,
+                "일반음식점": 94,
+                "서비스업": 90,
+                "휴게음식점": 85,
+                "오락스포츠": 36,
+                "주류점": 31,
+                "판매업": 15
+            },
+            "station_distribution": {
+                "역삼역, 도보 5분": 53,
+                "강남역, 도보 5분": 43,
+                "역삼역, 도보 4분": 40,
+                "강남역, 도보 6분": 40,
+                "역삼역, 도보 3분": 30,
+                "신논현역, 도보 3분": 30,
+                "강남역, 도보 4분": 27,
+                "역삼역, 도보 6분": 25,
+                "신논현역, 도보 4분": 25,
+                "신논현역, 도보 6분": 25
+            },
+            "rent_bins": {
+                "100-300만": 281,
+                "300-500만": 188,
+                "500-1000만": 109,
+                "1000-2000만": 54,
+                "100만 이하": 24,
+                "2000만 초과": 18
+            },
+            "floor_distribution": {
+                "1": 209,
+                "-1": 124,
+                "2": 109,
+                "4": 59,
+                "3": 57,
+                "5": 45,
+                "6": 24,
+                "7": 12,
+                "10": 9,
+                "-2": 8
+            },
+            "day_distribution": {
+                "Tuesday": 143,
+                "Monday": 133,
+                "Friday": 129,
+                "Thursday": 127,
+                "Wednesday": 116,
+                "Sunday": 16,
+                "October": 13
+            }
+        };
+
+        function initDashboard() {
+            const data = dashboardData;
+
+            // KPI 업데이트
+            document.getElementById('total-items').textContent = data.total_items.toLocaleString();
+            
+            // 보증금 억/천 단위 변환
+            const depositWon = data.avg_deposit;
+            const eok = Math.floor(depositWon / 100000000);
+            const man = Math.floor((depositWon % 100000000) / 10000);
+            document.getElementById('avg-deposit').innerHTML = 
+                `${eok > 0 ? eok + '<span class="kpi-unit">억</span> ' : ''}${man.toLocaleString()}<span class="kpi-unit">만원</span>`;
+            
+            document.getElementById('avg-rent').textContent = (data.avg_rent / 10).toLocaleString(); // 천원 단위 -> 만원 단위
+            document.getElementById('avg-mfee').textContent = (data.avg_maintenance / 10).toLocaleString();
+
+            // 차트 설정 공통 옵션
+            const commonOptions = {
+                theme: { mode: 'dark' },
+                chart: { background: 'transparent', toolbar: { show: false } },
+                colors: ['#38bdf8', '#818cf8', '#fb7185', '#34d399', '#fbbf24', '#a78bfa']
+            };
+
+            // 1. 업종별 차트
+            new ApexCharts(document.querySelector("#biz-chart"), {
+                ...commonOptions,
+                series: Object.values(data.biz_distribution),
+                labels: Object.keys(data.biz_distribution),
+                chart: { ...commonOptions.chart, type: 'donut', height: 350 },
+                stroke: { show: false },
+                legend: { position: 'bottom' },
+                plotOptions: { pie: { donut: { size: '70%' } } }
+            }).render();
+
+            // 2. 역세권 차트
+            new ApexCharts(document.querySelector("#station-chart"), {
+                ...commonOptions,
+                series: [{ name: '매물 수', data: Object.values(data.station_distribution) }],
+                chart: { ...commonOptions.chart, type: 'bar', height: 350 },
+                plotOptions: { bar: { borderRadius: 6, horizontal: true } },
+                xaxis: { categories: Object.keys(data.station_distribution) },
+                grid: { borderColor: 'rgba(255,255,255,0.05)' }
+            }).render();
+
+            // 3. 월세 구간 차트
+            const rentOrder = ['100만 이하', '100-300만', '300-500만', '500-1000만', '1000-2000만', '2000만 초과'];
+            new ApexCharts(document.querySelector("#rent-range-chart"), {
+                ...commonOptions,
+                series: [{ name: '매물 수', data: rentOrder.map(label => data.rent_bins[label] || 0) }],
+                chart: { ...commonOptions.chart, type: 'bar', height: 350 },
+                plotOptions: { bar: { borderRadius: 8, columnWidth: '50%' } },
+                xaxis: { categories: rentOrder },
+                colors: ['#818cf8']
+            }).render();
+
+            // 4. 요일별 차트
+            const dayOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            const dayLabels = ['월', '화', '수', '목', '금', '토', '일'];
+            new ApexCharts(document.querySelector("#day-chart"), {
+                ...commonOptions,
+                series: [{ name: '등록 건수', data: dayOrder.map(day => data.day_distribution[day] || 0) }],
+                chart: { ...commonOptions.chart, type: 'area', height: 350, zoom: { enabled: false } },
+                xaxis: { categories: dayLabels },
+                stroke: { curve: 'smooth', width: 3 },
+                fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.5, opacityTo: 0 } }
+            }).render();
+        }
+
+        // DOM 로드 완료 후 실행
+        window.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>
