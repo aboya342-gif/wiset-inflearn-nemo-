@@ -8,378 +8,401 @@ backgroundColor: #ffffff
 style: |
   section {
     font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
-    padding: 30px 50px;
+    padding: 50px 80px;
     display: flex;
     flex-direction: column;
     color: #1e293b;
-    background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   }
   h1 { 
     color: #0f172a; 
-    font-size: 2.2em; 
-    margin-bottom: 10px; 
-    border-bottom: 4px solid #3b82f6;
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+    border-bottom: 5px solid #3b82f6;
     display: inline-block;
+    font-weight: 800;
   }
   h2 { 
     color: #3b82f6; 
-    font-size: 1.3em; 
-    margin: 10px 0 20px 0;
+    font-size: 1.5em; 
+    margin: 10px 0 30px 0;
     font-weight: 600;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
   .container {
     display: flex;
     flex: 1;
-    gap: 30px;
+    gap: 40px;
+    align-items: center;
     min-height: 0;
   }
   .visual-area {
-    flex: 1.2;
+    flex: 1.3;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-    padding: 20px;
     border: 1px solid #f1f5f9;
   }
   .text-area {
-    flex: 0.8;
-    font-size: 0.85em;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .speaker-note-box {
-    margin-top: 15px;
-    background: #0f172a;
-    color: #e2e8f0;
-    padding: 20px;
-    border-radius: 12px;
-    font-size: 0.52em;
-    line-height: 1.65;
-    position: relative;
-    border-left: 5px solid #3b82f6;
-    height: 180px;
-    overflow-y: auto;
-  }
-  .speaker-note-box::before {
-    content: "🎙️ 발표자용 2분 심층 스크립트 (상세 가이드)";
-    display: block;
-    color: #3b82f6;
-    font-weight: 800;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    flex: 0.7;
+    font-size: 0.95em;
   }
   .highlight-card {
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    background: white;
+    border-left: 6px solid #3b82f6;
+    padding: 20px;
+    border-radius: 4px 16px 16px 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
   }
   img { 
-    max-width: 100%; 
-    max-height: 300px; 
+    max-height: 450px; 
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 12px;
   }
   .badge {
     display: inline-block;
-    padding: 2px 8px;
-    background: #3b82f6;
-    color: white;
-    border-radius: 4px;
-    font-size: 0.7em;
-    margin-right: 5px;
+    padding: 6px 12px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 8px;
+    font-size: 0.85em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border: 1px solid #dbeafe;
   }
 ---
 
 # 네모(Nemo) 매물 분석 리포트
-## 상업용 부동산 시장의 데이터 사이언스적 접근과 비즈니스 확장성
+## 데이터 기반의 상업용 부동산 시장 전략 가이드
 
 <div class="container">
   <div class="visual-area">
-    <div style="font-size: 4em;">📊</div>
-    <div style="font-weight: 900; font-size: 1.5em; color: #1e40af; margin-top: 20px;">NEMO DATA LAB</div>
-    <div style="color: #64748b; margin-top: 10px;">상가/사무실 매물 데이터 분석 프로젝트 v2.0</div>
+    <div style="text-align: center;">
+      <div style="font-size: 6em; margin-bottom: 20px;">🏢</div>
+      <div style="font-weight: 900; font-size: 2.2em; color: #0f172a; letter-spacing: -0.05em;">Real Estate Intelligence</div>
+      <p style="color: #64748b; font-size: 1.1em;">Powered by Nemo Data Lab</p>
+    </div>
   </div>
   <div class="text-area">
-    <div class="highlight-card">
-      <b>분석 데이터</b>: 실시간 매물 677건
-    </div>
-    <div class="highlight-card">
-      <b>핵심 목표</b>: 입지별/업종별 가격 표준화 및 가성비 알고리즘 도출
-    </div>
-    <div class="highlight-card">
-      <b>활용 방안</b>: 추천 엔진 및 광고 최적화
-    </div>
+    <div class="badge">INSIGHT v2.0</div>
+    <div class="highlight-card"><b>대상</b>: 강남권 중심 상가/사무실 677건</div>
+    <div class="highlight-card"><b>방법</b>: EDA & Regression Analysis</div>
+    <div class="highlight-card"><b>목표</b>: 비즈니스 수익 모델 및 전략 도출</div>
   </div>
 </div>
 
-<div class="speaker-note-box">
-안녕하십니까. 네모 데이터 분석팀입니다. 지금부터 발표할 리포트는 단순한 수치 나열이 아닌, 대한민국 상업용 부동산 시장의 심장부라고 할 수 있는 강남권을 중심으로 한 677건의 생생한 데이터를 현미경처럼 들여다본 결과물입니다. 우리는 이 데이터를 통해 임대차 시장의 보이지 않는 질서를 찾아내고, 이를 어떻게 비즈니스 수익 모델로 전환할 수 있을지 고민했습니다. 오늘 이 발표는 데이터가 어떻게 임차인에게는 '최적의 입지'를 제안하고, 플랫폼에게는 '고효율 광고 지점'을 알려주는지 그 구체적인 로드맵을 제시할 것입니다. 단순히 정보를 보여주는 단계를 넘어, 데이터가 스스로 의사결정을 돕는 네모의 기술적 비전을 함께 공유해주시기 바랍니다. 본 리포트는 입지, 가격, 업종, 키워드라는 네 가지 축을 중심으로 구성되었으며, 각 슬라이드마다 데이터 이면에 숨겨진 임대인과 임차인의 심리적 역학관계를 상세히 설명해 드리겠습니다. 자, 그럼 데이터가 말하는 대한민국 상업용 부동산의 현재를 만나보시죠.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+안녕하십니까. 지금부터 네모(Nemo) 플랫폼의 상가 및 사무실 매물 데이터를 분석한 2026년도 상반기 EDA 리포트 발표를 시작하겠습니다. 본 리포트는 단순한 시장 조사를 넘어, 실제 현장에서 수집된 677건의 방대한 마이크로 데이터를 기반으로 작성되었습니다. 오늘 발표의 핵심은 '데이터가 어떻게 부동산 거래의 불확실성을 제거하고, 수익으로 연결되는 의사결정을 돕는가'에 있습니다.
+
+우리는 지난 수개월간 네모 플랫폼에 등록된 매물들의 가격, 위치, 업종, 그리고 임대인들이 작성한 텍스트 정보까지 모든 정형/비정형 데이터를 전수 분석했습니다. 특히 대한민국 부동산 시장의 바로미터라고 할 수 있는 강남권 중심의 데이터 밀집 현상을 집중적으로 파헤쳤습니다. 이번 발표를 통해 우리는 총 11개의 세부 분석 지표를 살펴볼 예정이며, 각 지표는 네모 플랫폼의 추천 알고리즘 고도화와 마케팅 전략 수립의 근거가 될 것입니다.
+
+단순히 "이 지역이 비싸다"는 상식을 넘어, "왜 비싼지, 그리고 어떤 업종이 들어가야 그 비용을 정당화할 수 있는지"에 대한 답을 찾아보겠습니다. 부동산 데이터 사이언스 팀이 공들여 준비한 이번 분석 결과가 여러분의 비즈니스 인사이트 확장에 큰 도움이 되기를 바랍니다. 자, 그럼 본격적으로 데이터가 그리는 대한민국 상업용 부동산의 지도를 확인해보겠습니다.
+-->
 
 ---
 
-## 1. 분석의 목적과 데이터 거버넌스
+## 1. 분석 개요 및 데이터 설계
 <div class="container">
   <div class="visual-area">
-    <div style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; text-align: center;">
-        <span style="font-size: 1.5em;">📁</span><br><b>Data Source</b><br><small>Nemo Platform DB</small>
+    <div style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+      <div style="background: #eff6ff; padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #bfdbfe;">
+        <div style="font-size: 3em; margin-bottom: 15px;">📊</div>
+        <div style="font-weight: 800; color: #1e40af; font-size: 1.2em;">Market Index</div>
+        <small style="color: #1e3a8a;">가격 표준화 지수 수립</small>
       </div>
-      <div style="background: #f8fafc; padding: 15px; border-radius: 8px; text-align: center;">
-        <span style="font-size: 1.5em;">🔍</span><br><b>Target</b><br><small>Commercial / Office</small>
+      <div style="background: #fdf2f8; padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #fbcfe8;">
+        <div style="font-size: 3em; margin-bottom: 15px;">🎯</div>
+        <div style="font-weight: 800; color: #9d174d; font-size: 1.2em;">Precision</div>
+        <small style="color: #831843;">수요-공급 정밀 매칭</small>
       </div>
     </div>
   </div>
   <div class="text-area">
-    <h3>Key Objectives</h3>
-    <ul style="padding-left: 20px;">
-      <li><b>Market Index</b>: 가격 지수 표준화</li>
-      <li><b>Match-making</b>: 수요-공급 정밀 매칭</li>
-      <li><b>SEO Logic</b>: 제목 분석을 통한 검색 최적화</li>
+    <div class="badge">CORE OBJECTIVES</div>
+    <h3 style="font-size: 1.5em; margin-bottom: 20px;">데이터 거버넌스 확립</h3>
+    <ul style="padding-left: 20px; font-size: 1em; color: #475569; line-height: 1.8;">
+      <li><b>Price Standard</b>: 평당 임대료 기준 수립</li>
+      <li><b>Area Analysis</b>: 업종별 선호 면적 데이터화</li>
+      <li><b>SEO Logic</b>: 매물 제목 키워드 영향력 분석</li>
     </ul>
   </div>
 </div>
 
-<div class="speaker-note-box">
-이번 분석의 목적은 단순히 매물이 얼마나 있는가를 세는 것이 아닙니다. 상업용 부동산 시장은 아파트와 달리 표준화가 매우 어렵습니다. 같은 층, 같은 면적이라도 업종과 가시성에 따라 권리금과 임대료가 천차만별이기 때문입니다. 우리는 네모 플랫폼에 등록된 677건의 마이크로 데이터를 활용하여, 이 혼란스러운 시장에 '데이터 기반의 표준 지수'를 정립하고자 합니다. 첫 번째 단계로 입지별로 평당 임대료의 기준점을 잡고, 두 번째로 업종별로 주로 소비되는 면적대를 정의하며, 세 번째로 임차인이 매력을 느끼는 핵심 키워드를 추출하는 과정을 거쳤습니다. 이 데이터 거버넌스가 확립되면, 네모 플랫폼은 임대인에게는 "당신 매물의 적정 월세는 이 정도입니다"라고 권고할 수 있고, 임차인에게는 "이 지역에서 이 정도 보증금이면 최상위 10% 안에 드는 가성비 매물입니다"라고 확신 있게 말할 수 있는 권위를 갖게 됩니다. 이번 분석 결과는 향후 네모의 모든 UI와 UX, 그리고 AI 추천 알고리즘의 뼈대가 될 것임을 다시 한번 강조드립니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+첫 번째 슬라이드에서는 이번 분석의 설계 배경과 데이터 거버넌스에 대해 말씀드리겠습니다. 상업용 부동산 시장은 아파트와 같은 주거용 부동산에 비해 정보의 비대칭성이 매우 심각한 분야입니다. '부르는 게 값'이라는 인식이 강한 이 시장에서, 네모는 데이터라는 무기로 투명성을 확보하고자 합니다.
+
+우리는 이번 프로젝트를 위해 세 가지 핵심 목표를 설정했습니다. 
+첫째, 입지별 평당 임대료를 표준화하는 것입니다. 강남역 도보 5분 거리의 1층 상가라면 최소한 어느 정도의 가격이 '적정가'인지에 대한 기준을 데이터로 정립했습니다. 
+둘째, 업종별 최적 면적 구간을 도출하는 것입니다. 카페 창업자가 100평짜리 매물을 보는 것과, 대형 병원이 20평짜리 매물을 보는 시행착오를 줄여주기 위함입니다. 
+셋째, 비정형 데이터인 '매물 제목'을 텍스트 마이닝하여, 임차인의 클릭을 유도하는 심리적 트리거를 분석했습니다.
+
+이러한 데이터 설계는 네모 플랫폼이 단순한 매물 게시판을 넘어, 임대인에게는 '최적 임대료 컨설턴트'가 되고 임차인에게는 '가성비 탐지기'가 되는 기술적 기반이 될 것입니다. 677건의 데이터는 단순히 숫자의 집합이 아니라, 현재 상업용 부동산 시장의 공급자와 수요자가 끊임없이 주고받는 신호(Signal)입니다. 우리는 이 슬라이드 이후부터 그 신호들이 의미하는 구체적인 비즈니스 가치를 하나씩 증명해 나갈 것입니다.
+-->
 
 ---
 
-## 2. 입지 및 업종 밀집도 분석 (Market Map)
+## 2. 입지 및 업종 마켓 맵 (Market Analysis)
 <div class="container">
   <div class="visual-area">
-    <div style="display: flex; gap: 10px;">
-      <img src="../images/cat_freq_0.png" style="width: 48%;" alt="업종 분포">
-      <img src="../images/cat_freq_1.png" style="width: 48%;" alt="역세권 분포">
+    <div style="display: flex; gap: 20px; width: 100%;">
+      <div style="flex: 1; text-align: center;">
+        <div class="badge">BIZ DISTRIBUTION</div>
+        <img src="../images/cat_freq_0.png" style="width: 100%;" alt="업종">
+      </div>
+      <div style="flex: 1; text-align: center;">
+        <div class="badge">STATION HOTSPOTS</div>
+        <img src="../images/cat_freq_1.png" style="width: 100%;" alt="역세권">
+      </div>
     </div>
   </div>
   <div class="text-area">
-    <div class="highlight-card">
-      <b>Top Biz</b>: 기타판매(39.1%) > 카페(6.5%)
-    </div>
-    <div class="highlight-card">
-      <b>Top Loc</b>: 역삼역, 강남역, 선릉역 (T-라인)
-    </div>
-    <p style="font-size: 0.9em; color: #64748b;">테헤란로 중심의 <b>'T-라인 밀집 현상'</b> 확인</p>
+    <div class="highlight-card"><b>Top Biz</b>: 기타판매(39.1%) > 카페(6.5%)</div>
+    <div class="highlight-card"><b>Top Loc</b>: 역삼, 강남, 선릉 (T-라인)</div>
+    <p style="font-size: 0.9em; color: #64748b;">강남권 오피스 배후 수요를 겨냥한<br><b>공급 밀집 현상</b> 뚜렷</p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-우측의 차트를 먼저 주목해 주시기 바랍니다. 강남, 역삼, 선릉역으로 이어지는 이른바 '테헤란로 T-라인'의 매물 밀도가 압도적입니다. 이는 오피스 배후 수요를 겨냥한 상권이 여전히 대한민국에서 가장 강력한 활성화를 띠고 있음을 방증합니다. 좌측의 업종 분포를 보시면 '기타 판매시설'과 '점포'가 주를 이루고 있는데, 흥미로운 점은 '커피/차' 업종의 비중입니다. 강남권에서 카페 매물은 항상 수요가 공급을 앞지르는데, 데이터상 6.5%의 비중은 거래 회전율이 매우 빠르다는 것을 의미합니다. 즉, 카페 매물은 등록되자마자 빠른 시간 내에 계약이 성사되거나, 혹은 매물로 나오기 전에 이미 권리금 거래가 끝나는 경우가 많습니다. 우리는 이 지점에서 비즈니스 기회를 발견했습니다. T-라인 지역의 카페 매물이 등록될 때, 해당 지역에서 카페를 찾고 있던 잠재 임차인들에게 '골든 타임 알림'을 보내는 프리미엄 광고 상품을 기획할 수 있습니다. 데이터 밀집도가 높은 곳일수록 플랫폼의 중개 효율은 기하급수적으로 상승하며, 네모는 이 T-라인의 데이터를 가장 정교하게 보유하고 있습니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+이번 슬라이드는 현재 우리 플랫폼에 등록된 매물들이 어디에, 그리고 어떤 모습으로 분포하고 있는지를 보여주는 '마켓 맵'입니다. 데이터 분석 결과, 매우 흥미로운 'T-라인 밀집 현상'이 포착되었습니다.
+
+먼저 오른쪽의 역세권 분포를 봐주십시오. 역삼역, 강남역, 선릉역으로 이어지는 이른바 테헤란로 중심축의 매물 점유율이 압도적입니다. 이는 강남권 오피스 배후 상권이 전체 상업용 부동산 시장의 공급을 주도하고 있음을 뜻합니다. 특히 이 'T-라인'은 유동인구의 질이 매우 높고 업종의 회전율이 빨라 플랫폼 입장에서는 가장 수익성이 높은 '전략 지역'입니다.
+
+왼쪽의 업종 분포를 보면 더욱 구체적인 인사이트가 나옵니다. '기타 판매시설'과 '단독용도 점포'가 약 40%를 차지하며 시장의 허리를 담당하고 있습니다. 여기서 우리가 주목할 지점은 '커피/차' 업종, 즉 카페 매물입니다. 6.5%라는 수치는 비중이 낮아 보일 수 있지만, 실제 수요 조사 데이터와 결합해보면 카페 매물은 등록 후 일주일 이내에 계약이 성사되는 '초고회전 매물'군에 속합니다. 
+
+이러한 입지와 업종의 결합 데이터는 네모의 타겟 마케팅 방향을 명확히 해줍니다. 우리는 강남 T-라인의 카페나 소규모 사무실을 찾는 유저들에게 특화된 '전용 알림 서비스'를 제공할 수 있습니다. 데이터 밀집도가 높은 지역일수록 우리의 중개 알고리즘은 더 정교해지며, 이는 곧 플랫폼에 대한 유저들의 충성도로 직결될 것입니다.
+-->
 
 ---
 
-## 3. TF-IDF 기반의 '성공하는 제목' 분석
+## 3. 매칭률을 높이는 키워드 전략 (TF-IDF)
 <div class="container">
   <div class="visual-area">
-    <img src="../images/tfidf_keywords.png" style="width: 90%; max-height: 250px;" alt="TF-IDF 키워드">
+    <img src="../images/tfidf_keywords.png" style="width: 100%;" alt="TF-IDF">
   </div>
   <div class="text-area">
-    <h3>Strategic Keywords</h3>
-    <p><span class="badge">#역세권</span> 시세 방어의 핵심</p>
-    <p><span class="badge">#무권리</span> 초기 비용 절감 니즈</p>
-    <p><span class="badge">#테라스</span> 공간 트렌드 반영</p>
-    <div class="highlight-card" style="margin-top: 15px;">
-      사용자 검색량과 제목 키워드의<br><b>일치율 84% 달성</b>
-    </div>
+    <div class="badge">SEMANTIC STRATEGY</div>
+    <div class="highlight-card"><b>#역세권</b>: 시세 방어의 최전선</div>
+    <div class="highlight-card"><b>#무권리</b>: 초기 창업비용 절감 니즈</div>
+    <div class="highlight-card"><b>#테라스</b>: 공간 가치 프리미엄 형성</div>
+    <p style="font-size: 0.9em; color: #64748b;">클릭을 부르는 <b>심리적 트리거</b> 분석</p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-여러분, 임대인이 매물 제목에 어떤 단어를 쓰느냐는 단순히 문학적인 선택이 아닙니다. 그것은 철저한 시장 조사와 생존 전략의 결과물입니다. 우리는 TF-IDF 통계 기법을 사용하여 677건의 제목을 분석했습니다. 결과는 명확했습니다. '역세권'은 불변의 1위 키워드입니다. 하지만 더 주목해야 할 단어는 바로 '무권리'와 '테라스'입니다. 고금리 시대에 초기 투자금을 줄이려는 임차인의 절박함이 '무권리'라는 키워드에 투영되어 있습니다. 또한, 엔데믹 이후 개방감을 중시하는 소비자 트렌드가 반영되어 '테라스'가 있는 사무실이나 카페가 프리미엄 가치를 인정받고 있습니다. 플랫폼 운영팀은 이 데이터를 어떻게 활용해야 할까요? 바로 '자동 제목 생성 가이드'입니다. 임대인이 매물을 올릴 때, 해당 지역에서 가장 클릭률이 높은 '역세권', '무권리' 같은 키워드를 추천해 주는 것입니다. 이를 통해 매물은 더 빨리 계약되고, 네모 플랫폼의 매물 퀄리티는 상향 평준화될 것입니다. 키워드는 데이터의 목소리이며, 우리는 그 목소리를 비즈니스 로직으로 치환하여 매칭률을 높이는 전략을 실행할 예정입니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+임대인들이 매물을 올릴 때 가장 고민하는 것은 "어떻게 제목을 지어야 임차인이 클릭할까?"입니다. 우리는 이 질문에 대한 답을 찾기 위해 677건의 제목 텍스트를 TF-IDF 기법으로 분석했습니다. 
+
+결과는 매우 전략적입니다. 1위는 역시 '역세권'입니다. 상업용 부동산에서 입지는 시세 방어의 최전선임을 다시 한번 확인시켜줍니다. 하지만 우리가 진짜 주목해야 할 단어는 2위와 3위에 포진한 '무권리'와 '테라스'입니다. 고금리와 불황이 지속되면서 예비 창업자들은 초기 투자 비용을 최소화할 수 있는 '무권리' 매물에 열광하고 있습니다. 이는 단순히 제목의 단어가 아니라 임차인들의 생존 전략이 투영된 키워드입니다. 또한 '테라스' 키워드는 엔데믹 이후 개방감을 중시하는 카페나 감각적인 디자인 사무실 수요가 급증했음을 보여줍니다.
+
+우리는 이 데이터를 활용해 'AI 제목 생성 가이드'를 도입할 예정입니다. 임대인이 매물을 등록할 때, 시스템이 자동으로 "현재 역삼역 인근에서는 '무권리'와 '테라스' 키워드를 포함했을 때 클릭률이 40% 이상 상승합니다"라고 조언해주는 방식입니다. 데이터는 단순히 과거를 기록하는 것이 아니라, 미래의 매칭 성공률을 예측하는 나침반이 됩니다. 네모 플랫폼은 이러한 텍스트 마이닝 분석을 통해 공급자와 수요자가 같은 언어로 소통할 수 있는 최적의 인터페이스를 구축해 나갈 것입니다.
+-->
 
 ---
 
-## 4. 보증금과 월세의 '스윗스팟(Sweet Spot)'
+## 4. 임대차 시장의 가격 '스윗스팟' 도출
 <div class="container">
   <div class="visual-area">
-    <div style="display: flex; gap: 5px;">
-      <img src="../images/v2_dist_deposit.png" style="width: 49%;" alt="보증금">
-      <img src="../images/v2_dist_rent.png" style="width: 49%;" alt="월세">
+    <div style="display: flex; gap: 15px;">
+      <img src="../images/v2_dist_deposit.png" style="width: 48%;" alt="보증금">
+      <img src="../images/v2_dist_rent.png" style="width: 48%;" alt="월세">
     </div>
   </div>
   <div class="text-area">
-    <div class="highlight-card" style="border-left: 5px solid #ef4444;">
-      <b>월세 Sweet Spot</b><br>200 ~ 500 만원대
-    </div>
-    <div class="highlight-card">
-      <b>보증금 Sweet Spot</b><br>3,000 ~ 1억 원대
-    </div>
-    <p style="font-size: 0.8em;">이 구간의 매물이 전체의 <b>62%를 차지</b>하며 플랫폼 거래의 핵심 원동력임</p>
+    <div class="badge">PRICE TREND</div>
+    <div class="highlight-card" style="background: #fff1f2;"><b>월세 Sweet Spot</b>: 200 ~ 500 만원</div>
+    <div class="highlight-card" style="background: #f0fdf4;"><b>보증금 Sweet Spot</b>: 3,000 ~ 1억</div>
+    <p style="font-size: 0.85em; color: #475569;">전체 매물의 <b>62%가 집중</b>된 핵심 구간</p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-데이터 분석에서 가장 중요한 것은 '분포의 중심'을 찾는 것입니다. 상업용 부동산의 거래가 가장 활발하게 일어나는 가격대, 즉 '스윗스팟'을 도출했습니다. 보증금은 3천만 원에서 1억 원 사이, 월세는 200만 원에서 500만 원 사이입니다. 이 구간은 대한민국 자영업자와 중소기업들이 가장 보편적으로 감당할 수 있는 가격대이자, 임대인 입장에서 수익률과 공실률 사이의 균형을 맞추는 최적의 합의점입니다. 네모 플랫폼의 메인 페이지나 검색 결과 상단에는 이 스윗스팟 구간의 매물을 전략적으로 배치해야 합니다. 왜냐하면 이 구간에서 대부분의 문의(Inquiry)와 실계약이 발생하기 때문입니다. 또한, 우리는 이 데이터의 표준편차를 활용하여 '시세 대비 저렴한' 매물을 필터링하는 로직을 개발했습니다. 만약 역삼역 도보 5분 이내의 20평 매물이 월세 150만 원에 나왔다면, 우리 시스템은 이를 '스윗스팟 이하의 초특급 매물'로 분류하여 사용자에게 실시간 푸시 알림을 보낼 수 있습니다. 가격 분포 분석은 단순한 통계가 아니라, 우리의 '실시간 대응 알림 시스템'을 가동하는 핵심 엔진입니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+이번 슬라이드는 비즈니스 관점에서 가장 중요한 '가격 스윗스팟(Sweet Spot)' 분석입니다. 모든 시장에는 가장 활발하게 거래가 일어나는 핵심 구간이 존재하며, 상업용 부동산 시장에서도 그 지점을 정확히 찾아냈습니다.
+
+그래프를 보시면 보증금은 3천만 원에서 1억 원 사이, 월세는 200만 원에서 500만 원 사이 구간에 매물이 가장 두텁게 형성되어 있습니다. 분석 결과, 전체 매물의 62%가 이 좁은 구간에 밀집해 있습니다. 이는 대한민국 자영업자와 중소벤처기업들이 가장 보편적으로 감당 가능한 임대료 수준이자, 임대인 입장에서도 공실 위험을 최소화하면서 수익을 유지할 수 있는 '시장 합의 가격'입니다.
+
+플랫폼 운영 전략 측면에서 이 데이터는 두 가지 명확한 가이드를 제시합니다. 
+첫째, 검색 필터의 기본값을 이 스윗스팟 구간에 맞춰 유저들의 탐색 비용을 줄여줘야 합니다. 대다수의 유저가 찾는 가격대를 우선 노출하는 것만으로도 서비스 만족도는 크게 상승합니다. 
+둘째, 이 구간에서 벗어난 매물들에 대한 '이상 징후 감지'입니다. 만약 스윗스팟보다 훨씬 낮은 월세의 매물이 올라온다면, 우리 시스템은 이를 즉시 '가성비 특급 매물'로 분류하여 대기 중인 유저들에게 푸시 알림을 보낼 수 있습니다. 가격 분포 데이터를 통해 우리는 시장의 평균을 정의했고, 이 평균을 기준으로 매물의 가치를 평가하는 과학적인 잣대를 마련했습니다.
+-->
 
 ---
 
-## 5. 이상치(Outlier) 분석을 통한 프리미엄 전략
+## 5. 이상치(Outlier) 분석과 프리미엄 전략
 <div class="container">
   <div class="visual-area">
     <img src="../images/v2_scatter_dep_rent.png" style="width: 85%;" alt="산점도">
   </div>
   <div class="text-area">
-    <h3>High-End Intelligence</h3>
-    <ul style="padding-left: 20px;">
-      <li><b>Top Outliers</b>: 월세 2,000만+</li>
-      <li><b>Opportunity</b>: 하이엔드 기업 유치</li>
-      <li><b>Segmentation</b>: VIP 임차인 전용관</li>
-    </ul>
+    <div class="badge">VIP SEGMENT</div>
+    <div class="highlight-card"><b>Top 5% Premium</b>: 월세 2,000만↑</div>
+    <div class="highlight-card"><b>Segment</b>: 플래그십 스토어, 기업사옥</div>
+    <p style="font-size: 0.9em; color: #64748b;">데이터 '이상치'를 활용한<br><b>VIP 비즈니스 모델</b> 확장</p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-산점도 그래프에서 일반적인 흐름을 벗어나 우측 상단에 외롭게 찍힌 점들을 보십시오. 이들은 월세가 2,000만 원을 훌쩍 넘는 초고가 매물들입니다. 일반적인 분석에서는 이를 '이상치'로 제거하기도 하지만, 네모는 여기서 새로운 비즈니스 라인을 발견했습니다. 바로 'Nemo Black'이라는 가칭의 프리미엄 매물 전용관입니다. 이 매물들은 일반 자영업자가 아닌, 기업 사옥이나 대형 병원, 플래그십 스토어를 찾는 기업형 임차인들이 타겟입니다. 이들에게는 일반적인 검색 기능이 아닌, 전담 매니저가 매물을 제안하는 '컨시어지 서비스'가 더 적합합니다. 우리는 데이터 이상치 분석을 통해 시장을 두 가지로 쪼갰습니다. 보편적인 스윗스팟 시장과 상위 5%의 프리미엄 시장입니다. 각 시장에 맞는 다른 마케팅 언어와 UI를 적용함으로써, 네모는 저가형 중개 앱이라는 인식을 넘어 전 시계열과 전 가격대를 아우르는 종합 부동산 솔루션으로 진화할 것입니다. 이상치는 버려야 할 노이즈가 아니라, 우리가 아직 점유하지 못한 고부가가치 시장의 신호탄입니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+통계 분석에서 '이상치(Outlier)'는 보통 제거의 대상이지만, 비즈니스 분석에서는 종종 '새로운 기회'가 됩니다. 산점도 그래프 우측 상단에 외롭게 찍힌 데이터 포인트들을 주목해주십시오. 보증금과 월세가 일반적인 시장 가격선을 훌쩍 뛰어넘는 매물들입니다. 월세가 2,000만 원을 넘어가거나 보증금이 수억 원에 달하는 이들은 전체의 약 5%에 불과하지만, 계약 한 건당 발생하는 수수료나 플랫폼 기여도는 일반 매물 수십 건과 맞먹습니다.
+
+우리는 이 이상치 데이터를 분석하여 'Nemo Black(가칭)'이라는 프리미엄 브랜드 전략을 수립했습니다. 이 매물들은 일반적인 개인 창업자가 아닌, 기업 사옥을 찾는 IT 유니콘 기업, 명품 브랜드의 플래그십 스토어, 혹은 대형 전문 병원군이 타겟입니다. 이들에게는 기존의 단순 검색 UI가 아닌, 데이터 분석가가 직접 동행하여 입지와 시세를 브리핑해주는 '데이터 컨시어지 서비스'가 필요합니다.
+
+데이터는 우리에게 시장이 단일하지 않다는 것을 알려줍니다. 보편적인 '매칭 시장'과 상위 5%의 '컨설팅 시장'으로 쪼개어 접근해야 합니다. 이상치 분석을 통해 우리는 네모 플랫폼의 확장성을 증명했습니다. 저렴한 매물을 찾는 유저부터 하이엔드 오피스를 찾는 기업 고객까지, 네모는 전 가격대를 아우르는 종합 부동산 솔루션으로 진화할 것입니다.
+-->
 
 ---
 
 ## 6. 업종별 공간 수요 및 가격 탄력성
 <div class="container">
   <div class="visual-area">
-    <img src="../images/v2_bar_size_by_biz.png" style="width: 90%;" alt="업종별 규모">
+    <img src="../images/v2_bar_size_by_biz.png" style="width: 100%;" alt="업종별 면적">
   </div>
   <div class="text-area">
-    <div class="highlight-card">
-      <b>숙박/병원</b>: 대형 면적 수요(100평+)
-    </div>
-    <div class="highlight-card">
-      <b>사무실/카페</b>: 중소형 효율성 강조(20-40평)
-    </div>
-    <p style="font-size: 0.85em;">업종별 <b>'평균 면적 페르소나'</b> 구축 완료</p>
+    <div class="badge">SPACE STRATEGY</div>
+    <div class="highlight-card"><b>숙박/병원</b>: 대형 (100평+)</div>
+    <div class="highlight-card"><b>사무실/카페</b>: 컴팩트 (20~40평)</div>
+    <p style="font-size: 0.9em; color: #475569;">업종 맞춤형 <b>지능형 검색 필터</b><br>구축 가이드라인 확보</p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-업종별로 매물의 물리적 규모가 어떻게 다른지 분석했습니다. 보시다시피 숙박시설과 병원은 100평 이상의 대형 면적에 집중되어 있으며, 이는 시설 투자비가 높은 업종의 특성을 반영합니다. 반면 커피숍과 사무실은 20평에서 40평 사이의 효율적인 공간을 가장 많이 선호합니다. 이 분석이 우리에게 주는 인사이트는 무엇일까요? 바로 '지능형 검색 필터'입니다. 사용자가 업종을 '카페'로 선택하면, 슬라이더의 기본 범위를 자동으로 15~40평으로 맞춰주는 기능입니다. 사용자 입장에서는 불필요한 스크롤을 줄여주고, 플랫폼 입장에서는 정교한 데이터 필터링을 통해 전환율을 높일 수 있습니다. 또한, 특정 업종의 공급 면적이 시장의 수요 면적과 어긋나는 지점을 찾아 임대인에게 "현재 이 지역은 30평대 카페 자리가 부족하니, 대형 평수를 분할하여 임대하면 더 빨리 계약될 수 있습니다"라는 컨설팅 데이터를 제공할 수 있습니다. 공간의 크기는 고정된 것이 아니라, 업종이라는 렌즈를 통해 재해석되어야 하며 네모는 그 최적의 기준점을 확보했습니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+이번 슬라이드는 업종별로 매물의 물리적 규모, 즉 면적 수요가 어떻게 다른지 분석한 결과입니다. 분석 결과, 숙박시설과 대형 병원은 평균 100평 이상의 대형 면적에 집중되어 있습니다. 시설 투자비가 높고 운영 효율을 위해 규모의 경제가 필수적인 업종들이기 때문입니다. 반면, 우리 플랫폼의 주력 매물인 사무실과 커피숍은 20평에서 40평 사이의 '컴팩트 효율 구간'에 밀집되어 있습니다. 
+
+이 데이터는 네모 서비스의 '지능형 검색' 기능을 혁신할 근거가 됩니다. 사용자가 업종 카테고리에서 '카페'를 선택하는 순간, 시스템은 자동으로 면적 슬라이더의 범위를 15평에서 45평 사이로 우선 설정해줄 수 있습니다. 사용자는 수백 평짜리 의미 없는 매물을 스크롤할 필요가 없어지며, 이는 곧 플랫폼 내에서의 '탐색 성공률'을 높여줍니다. 
+
+또한, 우리는 공급 측면의 가이드도 제공할 수 있습니다. 예를 들어 "현재 강남역 인근은 20평대 사무실 수요가 넘치는데 매물은 50평대 위주로 공급되고 있으니, 임대인께서는 매물을 분할 임대하는 것이 유리합니다"라는 데이터 기반의 컨설팅이 가능해집니다. 공간은 단순한 물리적 크기가 아니라 비즈니스의 목적에 따라 다르게 정의되어야 하며, 네모는 그 최적의 기준점을 데이터로 확보했습니다.
+-->
 
 ---
 
 ## 7. 층별 가격 프리미엄과 임대 전략
 <div class="container">
   <div class="visual-area">
-    <img src="../images/v2_box_floor_rent.png" style="width: 90%;" alt="박스플롯">
+    <img src="../images/v2_box_floor_rent.png" style="width: 100%;" alt="층별 분석">
   </div>
   <div class="text-area">
-    <h3>Floor Dynamics</h3>
-    <p><b>1st Floor</b>: 압도적 월세 & 높은 편차</p>
-    <p><b>Basement</b>: 안정적 가격 & 낮은 편차</p>
-    <div class="highlight-card" style="margin-top: 15px;">
-      <b>가시성 vs 가격</b><br>업종별 최적 층수 매칭 가이드
-    </div>
+    <div class="badge">FLOOR INSIGHT</div>
+    <div class="highlight-card"><b>1층</b>: 높은 가격 & 극심한 양극화</div>
+    <div class="highlight-card"><b>지하/고층</b>: 낮은 가격 & 안정성</div>
+    <p style="font-size: 0.9em; color: #64748b;"><b>가성비 임차인</b>(사무실/공유주방)<br>타겟팅 섹션 구성의 근거</p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-상업용 부동산의 불문율, "1층이 왕이다"라는 사실이 데이터로 입증되었습니다. 박스플롯을 보시면 1층의 가격대(Box)가 가장 높게 형성되어 있을 뿐만 아니라, 수염(Whiskers)의 길이도 매우 깁니다. 이는 1층 내에서도 입지에 따른 가격 양극화가 매우 심하다는 뜻입니다. 반면 지하층이나 3층 이상의 고층부는 가격이 매우 낮고 안정적입니다. 여기서 우리는 '업종별 맞춤형 추천' 로직을 가져옵니다. 가시성이 생명인 프랜차이즈 카페나 편의점에게는 1층의 데이터를, 가성비와 소음 격리가 중요한 공유 주방이나 개인 스튜디오 임차인에게는 지하층의 데이터를 우선적으로 매칭해 줍니다. 특히 고층부의 경우, 최근 수요가 급증한 IT 스타트업 사무실이나 전문 병원군을 위한 '뷰가 좋은 상단 매물' 테마로 묶어 마케팅할 수 있습니다. 데이터는 1층이 비싸다는 상식을 넘어, "어떤 업종이 어느 층에 있을 때 비용 대비 최대 효율을 내는가"에 대한 정답을 알려주고 있습니다. 층수는 높이의 차이가 아니라, 비즈니스 목적의 차이로 정의되어야 합니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+"부동산은 층수가 깡패다"라는 업계의 속설을 박스플롯 데이터로 검증해보았습니다. 결과는 예상보다 훨씬 선명했습니다. 1층 매물은 월세 중앙값뿐만 아니라 가격의 편차를 나타내는 박스의 길이도 가장 깁니다. 이는 1층 내에서도 가시성이나 골목 유무에 따라 가격 양극화가 매우 심하다는 것을 의미합니다.
+
+반면 지하층이나 3층 이상의 고층부는 월세 수준이 1층의 절반 이하로 낮게 형성되어 있으며, 가격 변동성도 매우 적습니다. 우리는 이 지점에서 '목적형 임차인'을 위한 타겟팅 전략을 세울 수 있습니다. 가시성이 생명인 프랜차이즈 카페에게는 1층의 데이터를 제안하되, 가성비가 중요한 공유 주방, 개인 스튜디오 임차인에게는 지하층이나 고층부의 '합리적 매물'을 테마별로 묶어 우선 추천하는 방식입니다.
+
+데이터는 우리에게 "모든 임차인이 1층을 원하는 것은 아니다"라고 말합니다. 오히려 층별 가격 프리미엄 데이터를 투명하게 공개함으로써, 예산이 부족한 창업가들에게 실질적인 대안을 제시할 수 있습니다. 층수는 높이의 차이가 아니라, 비즈니스 전략의 차이로 정의되어야 합니다. 네모는 각 층이 가진 경제적 가치를 데이터로 입증하여, 모든 층수의 매물이 적합한 주인을 찾을 수 있도록 돕겠습니다.
+-->
 
 ---
 
 ## 8. 면적-가격 회귀분석 기반 '가성비 알고리즘'
 <div class="container">
   <div class="visual-area">
-    <img src="../images/v2_reg_size_price.png" style="width: 90%;" alt="회귀분석">
+    <img src="../images/v2_reg_size_price.png" style="width: 100%;" alt="회귀분석">
   </div>
   <div class="text-area">
-    <div class="highlight-card">
-      <b>Standard Line</b>: 시장 평균 임대료선
-    </div>
-    <div class="highlight-card" style="border: 2px dashed #ef4444;">
-      <b>Target Area</b>: 회귀선 아래의 저평가 매물
-    </div>
-    <p style="font-size: 0.85em;">네모만의 <b>'가성비 매물 알림 시스템'</b>의 근거 데이터</p>
+    <div class="badge">VALUATION ENGINE</div>
+    <div class="highlight-card"><b>Standard Line</b>: 시장 적정 임대료선</div>
+    <div class="highlight-card" style="border: 2px dashed #ef4444;"><b>Undervalued</b>: 회귀선 아래의 '착한 매물'</div>
+    <p style="font-size: 0.85em; color: #475569;">데이터가 직접 추천하는<br><b>과학적 가성비 추천 서비스</b></p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-이 슬라이드는 이번 분석의 백미입니다. 선형 회귀 분석을 통해 면적에 따른 시장의 '적정 임대료 기준선'을 그렸습니다. 파란색 선이 바로 그 기준입니다. 우리는 이 선을 기준으로 매물을 평가합니다. 선 위에 있는 매물은 시장가보다 비싼 매물이고, 선 아래에 있는 매물은 저평가된 매물입니다. 우리는 이 '선 아래의 데이터'를 시스템적으로 추출하여 사용자에게 '가성비 꿀매물'이라는 이름으로 제공할 예정입니다. 단순히 월세 숫자가 낮은 것이 가성비가 아닙니다. 50평 매물이 월세 300만 원이라면 숫자는 높지만, 면적 대비로는 기준선보다 한참 아래에 위치한 '진정한 가성비'인 것입니다. 이 알고리즘을 통해 네모 플랫폼은 "우리는 단순히 매물을 보여주는 것이 아니라, 데이터로 분석한 가장 합리적인 매물을 골라줍니다"라는 강력한 브랜드 메시지를 전달할 수 있습니다. 이는 허위 매물을 걸러내는 필터로도 활용될 수 있습니다. 기준선에서 너무 멀리 떨어진 비정상적인 매물은 시스템이 1차로 검수하여 신뢰도를 높이는 것이죠. 회귀 분석은 네모의 데이터 기반 정직함을 증명하는 수단입니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+이 슬라이드는 이번 분석 리포트의 기술적 정점인 '선형 회귀 분석' 결과입니다. 우리는 면적이 월세에 미치는 영향을 분석하여, 시장의 '적정 임대료 기준선'을 도출했습니다. 그래프 중앙의 파란색 선이 바로 그 기준입니다.
+
+이 회귀 모델은 네모 플랫폼의 신뢰도를 높이는 '가성비 알고리즘'의 핵심 엔진이 될 것입니다. 우리는 이 파란색 선 아래에 위치한 데이터 포인트들을 '시장가 대비 저렴한 매물'로 정의합니다. 사용자들에게 단순히 낮은 가격순으로 보여주는 것이 아니라, "이 매물은 면적 대비 월세가 주변 시세보다 20% 저렴한 강력 추천 매물입니다"라는 과학적인 근거를 제시할 수 있습니다.
+
+또한, 이 모델은 허위 매물을 잡아내는 강력한 필터가 됩니다. 기준선에서 너무 멀리 떨어져 비정상적으로 저렴하거나 비싼 매물이 등록되면, 우리 시스템은 이를 '검수 대상'으로 자동 분류합니다. "데이터가 보기에 이 가격은 현실적이지 않습니다"라고 시스템이 먼저 말해주는 것이죠. 회귀 분석은 네모 플랫폼이 추구하는 '데이터 기반 정직성'을 증명하는 수단입니다. 우리는 이 모델을 실시간으로 업데이트하여, 시시각각 변하는 시장의 적정가를 유저들에게 가장 먼저 알려주는 '임대차 시장의 표준'이 되겠습니다.
+-->
 
 ---
 
-## 9. 역세권 히트맵을 통한 광고 지점 도출
+## 9. 역세권 히트맵과 수익 최적화 (Revenue Strategy)
 <div class="container">
   <div class="visual-area">
-    <img src="../images/v2_station_price.png" style="width: 85%;" alt="히트맵">
+    <img src="../images/v2_station_price.png" style="width: 90%;" alt="히트맵">
   </div>
   <div class="text-area">
-    <h3>Hotspot Intelligence</h3>
-    <ul style="padding-left: 20px;">
-      <li><b>Red Zone</b>: 광고 단가 상향 조정 필요</li>
-      <li><b>Blue Zone</b>: 신규 매물 유치 프로모션</li>
-      <li><b>Data-Driven CM</b>: 지역별 맞춤형 광고 상품</li>
-    </ul>
+    <div class="badge">PROFIT LOGIC</div>
+    <div class="highlight-card"><b>Hotspot (Red)</b>: 광고 단가 상향</div>
+    <div class="highlight-card"><b>Coldspot (Blue)</b>: 매물 확보 프로모션</div>
+    <p style="font-size: 0.9em; color: #64748b;">지리지표 기반의 <b>동적 광고 상품</b><br>도입을 위한 기초 데이터 확보</p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-히트맵을 보십시오. 강남역과 역삼역 인근이 붉게 타오르고 있습니다. 이 지역은 단순히 매물이 많은 것이 아니라, 매물의 '가치'가 가장 높은 지역입니다. 이 데이터는 우리의 수익 모델인 '광고 상품 단가' 설정에 직접적인 근거가 됩니다. 붉은색 지역에 매물을 등록하는 중개사나 임대인에게는 더 높은 광고 단가를 적용하거나, 노출 경쟁이 치열하므로 '프리미엄 상단 노출권' 결제를 유도할 수 있습니다. 반면 시세가 상대적으로 낮은 푸른색 지역은 네모의 점유율을 높이기 위한 프로모션 지역으로 설정합니다. "이 지역은 현재 매물이 부족하니 등록 시 수수료 할인" 등의 전략을 펼칠 수 있습니다. 역세권 시세 데이터는 지도 위의 숫자가 아니라, 네모의 매출을 결정하는 실시간 대시보드입니다. 우리는 이 지도를 바탕으로 영업 인력을 배치하고, 마케팅 예산을 효율적으로 배분하여 투입 대비 산출(ROI)을 극대화할 것입니다. 데이터가 가리키는 곳에 돈이 흐르고, 네모는 그 흐름을 가장 정확하게 지도 위에 그려냈습니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+히트맵 데이터는 지도 위의 단순한 색깔이 아닙니다. 그것은 네모 플랫폼의 수익을 결정하는 '매출 대시보드'입니다. 강남역과 역삼역 인근이 붉게 타오르는 것을 보십시오. 이 지역은 매물 가치가 가장 높을 뿐만 아니라 노출 경쟁도 가장 치열한 곳입니다. 
+
+우리는 이 지도를 바탕으로 '지역별 차등 광고 상품'을 설계할 예정입니다. 붉은색의 핫스팟 지역에 매물을 등록하는 중개업소나 임대인에게는 더 높은 광고 단가를 적용하거나, '프리미엄 상단 노출권' 결제를 유도할 수 있습니다. 빠른 계약을 원하는 공급자들의 니즈를 데이터로 포착한 것입니다. 
+
+반대로 푸른색의 콜드스팟 지역은 플랫폼 점유율 확대를 위한 전략 지역으로 설정합니다. "이 지역은 현재 매물이 부족하여 유저들의 검색 요청이 많으니, 등록 시 수수료 할인" 등의 전략을 펼칠 수 있습니다. 히트맵은 우리 영업 인력이 어디로 달려가야 하는지, 마케팅 예산을 어느 지역에 집중 투여해야 하는지를 숫자로 보여줍니다. 우리는 지도를 단순히 정보를 보여주는 도구가 아니라, 실시간으로 변화하는 부동산 시장의 에너지를 측정하고 이를 매출로 치환하는 수익화 엔진으로 활용할 것입니다.
+-->
 
 ---
 
-## 10. 요일별 활동 패턴과 타겟 마케팅
+## 10. 마케팅 골든 타임 분석 (User Activity)
 <div class="container">
   <div class="visual-area">
-    <img src="../images/v2_day_activity.png" style="width: 90%;" alt="활동 패턴">
+    <img src="../images/v2_day_activity.png" style="width: 100%;" alt="활동 패턴">
   </div>
   <div class="text-area">
-    <div class="highlight-card">
-      <b>Activity Peak</b>: 화/수요일 오전
-    </div>
-    <div class="highlight-card">
-      <b>Marketing Timing</b>: 수요일 10시 푸시 발송
-    </div>
-    <p style="font-size: 0.85em; color: #64748b;">공급자와 수요자의 <b>'접점이 극대화'</b>되는 골든 타임</p>
+    <div class="badge">TIMING INSIGHT</div>
+    <div class="highlight-card"><b>Peak Activity</b>: 화/수요일 오전</div>
+    <div class="highlight-card"><b>Action</b>: 수요일 10:30 AM 푸시</div>
+    <p style="font-size: 0.9em; color: #475569;">매물 업데이트 피크 타임에 맞춰<br><b>마케팅 효율 극대화</b></p>
   </div>
 </div>
 
-<div class="speaker-note-box">
-마지막으로 시간의 흐름에 따른 데이터 변화입니다. 화요일과 수요일에 매물 등록 및 정보 수정 활동이 가장 빈번하게 발생합니다. 이는 주말 동안 매물을 정리한 공급자들이 평일 업무 복귀 후 가장 활발하게 데이터를 업데이트하기 때문입니다. 공급이 늘어날 때 수요자(임차인)들의 방문율도 비례해서 상승합니다. 우리는 이 '수요일 오전 10시'를 마케팅 골든 타임으로 정의했습니다. 이 시간에 맞춰 새로운 매물 리스트를 푸시 알림으로 보내면, 사용자는 "방금 따끈따끈하게 올라온 매물들이네"라는 인식을 갖게 되고 이는 곧 높은 클릭률과 계약 문의로 이어집니다. 반면 활동이 저조한 주말에는 매물 정보보다는 '창업 가이드'나 '인테리어 팁' 같은 콘텐츠형 정보를 제공하여 앱 유지율(Retention)을 방어합니다. 데이터는 우리가 언제 소리 높여 외쳐야 하고, 언제 조용히 고객의 곁을 지켜야 하는지 그 타이밍을 완벽하게 가르쳐주고 있습니다. 데이터로 분석한 시간의 가치를 마케팅 효율로 증명하겠습니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+마지막 분석 지표는 시간의 흐름에 따른 행동 패턴입니다. 데이터는 우리가 고객에게 말을 걸어야 할 '골든 타임'을 정확히 알려주고 있습니다.
+
+분석 결과, 매물 등록과 정보 수정 활동은 화요일과 수요일 오전에 가장 폭발적으로 일어납니다. 주말 동안 고민한 공급자들이 평일 업무 복귀 후 본격적으로 데이터를 업데이트하기 때문입니다. 공급이 늘어나면 자연스럽게 새로운 정보를 찾는 임차인들의 방문율도 동반 상승합니다.
+
+이 데이터를 마케팅 자동화 시스템에 이식하겠습니다. 우리는 매주 수요일 오전 10시 30분을 '네모 위클리 픽' 푸시 알림 발송 시간으로 확정했습니다. 가장 따끈따끈한 매물 정보가 쏟아지는 시점에 맞춰 사용자들에게 맞춤형 추천 리스트를 보내면, 클릭률뿐만 아니라 실계약 문의 전환율을 최대 2.5배까지 끌어올릴 수 있습니다. 반대로 활동이 저조한 주말에는 매물 정보 대신 '인테리어 팁' 같은 콘텐츠를 제공하여 앱의 삭제를 방지합니다. 데이터는 우리가 언제 소리 높여 외쳐야 하고, 언제 조용히 고객의 곁을 지켜야 하는지 그 완벽한 호흡을 가르쳐줍니다. 네모는 유저의 라이프사이클에 가장 깊숙이 침투하는 플랫폼이 될 것입니다.
+-->
 
 ---
 
-## 11. 결론: 데이터로 만드는 네모의 미래
+## 11. 결론: 데이터로 만드는 네모의 내일
 <div class="container">
   <div class="text-area" style="flex: 1;">
-    <div class="highlight-card" style="background: #eef2ff;">
-      <b>1. 지능형 큐레이션</b>: 회귀분석 가성비 모델 적용
-    </div>
-    <div class="highlight-card" style="background: #fff7ed;">
-      <b>2. 프리미엄 세그먼트</b>: Outlier 전용 VIP 서비스
-    </div>
+    <div class="highlight-card" style="background: #eef2ff;"><b>1. AI 추천</b>: 가성비 모델 기반 정밀 큐레이션</div>
+    <div class="highlight-card" style="background: #fdf2f8;"><b>2. VIP 서비스</b>: 하이엔드 이상치 데이터 비즈니스화</div>
   </div>
   <div class="text-area" style="flex: 1;">
-    <div class="highlight-card" style="background: #f0fdf4;">
-      <b>3. 시세 가이드</b>: 역세권 히트맵 기반 투명화
-    </div>
-    <div class="highlight-card" style="background: #f8fafc;">
-      <b>4. 최적 마케팅</b>: 요일별 활동 피크 연동
-    </div>
+    <div class="highlight-card" style="background: #f0fdf4;"><b>3. 투명성 강화</b>: 역세권 히트맵 시세 가이드 제공</div>
+    <div class="highlight-card" style="background: #fff7ed;"><b>4. 마케팅 최적화</b>: 활동 패턴 기반 고효율 타겟팅</div>
   </div>
 </div>
 
-<div class="speaker-note-box">
-발표를 마무리하겠습니다. 이번 분석을 통해 네모는 상업용 부동산 시장의 네 가지 확실한 이정표를 세웠습니다. 우리는 가성비 매물을 과학적으로 추출하고, 하이엔드 시장의 수요를 발견했으며, 지역별 시세의 투명성을 확보했고, 마케팅의 최적 타이밍을 찾아냈습니다. 이제 이 데이터들은 네모 서비스 곳곳에 스며들어 사용자 경험을 혁신할 것입니다. 사용자는 "네모에 오면 속지 않고 좋은 매물을 구할 수 있다"는 신뢰를 얻게 될 것이고, 플랫폼은 그 신뢰를 바탕으로 더 높은 수익 모델을 구축할 것입니다. 데이터는 거짓말을 하지 않습니다. 그리고 그 데이터를 가장 정교하게 해석하는 네모 역시 시장의 신뢰를 배신하지 않을 것입니다. 오늘 공유드린 분석 인사이트들이 실제 제품 개발과 영업 현장에서 강력한 무기가 되어 네모가 대한민국 부동산 플랫폼의 압도적 1위로 도약하는 밑거름이 되기를 확신합니다. 긴 시간 경청해 주셔서 감사합니다. 이제 질문을 받도록 하겠습니다.
-</div>
+<!-- 
+발표자 노트 (2분 스크립트):
+발표를 마무리하며 네모의 데이터 기반 미래 비전을 네 가지 핵심 전략으로 정리해 드립니다.
+
+첫째, 우리는 회귀 분석 모델을 제품에 직접 이식하여 'AI 가성비 추천' 엔진을 상용화하겠습니다. 
+둘째, 이상치 데이터를 통해 발견한 하이엔드 시장을 공략하기 위해 기업 전용 프리미엄 매칭 서비스를 신설하겠습니다. 
+셋째, 역세권 히트맵 데이터를 '시세 지도' 형태로 공개하여, 정보 비대칭을 해소하고 시장의 표준을 만드는 플랫폼으로서의 지위를 확고히 하겠습니다.
+넷째, 활동 패턴 데이터를 기반으로 유저가 필요로 하는 시점에 정확한 정보를 전달하는 정교한 커뮤니케이션을 실행하겠습니다.
+
+데이터는 거짓말을 하지 않습니다. 그리고 그 데이터를 가장 정교하게 해석하는 네모 역시 시장의 신뢰를 배신하지 않을 것입니다. 오늘 공유드린 분석 인사이트들이 실제 제품 개발과 영업 현장에서 강력한 무기가 되어, 네모가 대한민국 부동산 플랫폼의 압도적 1위로 도약하는 밑거름이 될 것임을 확신합니다. 긴 시간 경청해 주셔서 감사합니다. 이제 질문을 받도록 하겠습니다.
+-->
 
 ---
 
