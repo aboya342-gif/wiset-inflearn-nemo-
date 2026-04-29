@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 header: "NEMO REAL ESTATE DATA"
-footer: "© 2026 NEMO DATA LAB"
+footer: "© 2026 NEMO DATA LAB | V2.1 (NEO-BRUTALISM)"
 backgroundColor: #f5f500
 style: |
   section {
@@ -11,95 +11,95 @@ style: |
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
-    color: #000000;
-    background-color: #f5f500;
+    color: #000000 !important;
+    background-color: #f5f500 !important;
+    background-image: none !important;
   }
   h1 { 
-    font-family: 'Arial Black', Gadget, sans-serif;
-    color: #000000; 
-    font-size: 2.8em; 
-    margin-bottom: 20px; 
-    background: #ffffff;
-    padding: 15px 25px;
-    border: 5px solid #000000;
-    box-shadow: 10px 10px 0px 0px #000000;
-    display: inline-block;
-    text-transform: uppercase;
-    line-height: 1;
+    font-family: 'Arial Black', Gadget, sans-serif !important;
+    color: #000000 !important; 
+    font-size: 2.8em !important; 
+    margin-bottom: 20px !important; 
+    background: #ffffff !important;
+    padding: 15px 25px !important;
+    border: 5px solid #000000 !important;
+    box-shadow: 10px 10px 0px 0px #000000 !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+    line-height: 1 !important;
   }
   h2 { 
-    font-family: 'Arial Black', Gadget, sans-serif;
-    color: #000000; 
-    font-size: 1.6em; 
-    margin: 10px 0 25px 0;
-    background: #FF2D55;
-    color: white;
-    padding: 8px 16px;
-    border: 4px solid #000000;
-    box-shadow: 6px 6px 0px 0px #000000;
-    display: inline-block;
-    text-transform: uppercase;
+    font-family: 'Arial Black', Gadget, sans-serif !important;
+    color: #ffffff !important; 
+    font-size: 1.6em !important; 
+    margin: 10px 0 25px 0 !important;
+    background: #FF2D55 !important;
+    padding: 8px 16px !important;
+    border: 4px solid #000000 !important;
+    box-shadow: 6px 6px 0px 0px #000000 !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
   }
   h3 {
-    font-family: 'Arial Black', Gadget, sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+    font-family: 'Arial Black', Gadget, sans-serif !important;
+    text-transform: uppercase !important;
+    margin-bottom: 15px !important;
   }
   .container {
-    display: flex;
-    flex: 1;
-    gap: 30px;
-    align-items: center;
-    min-height: 0;
+    display: flex !important;
+    flex: 1 !important;
+    gap: 30px !important;
+    align-items: center !important;
+    min-height: 0 !important;
   }
   .visual-area {
-    flex: 1.2;
-    background: #ffffff;
-    border: 5px solid #000000;
-    box-shadow: 15px 15px 0px 0px #000000;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1.2 !important;
+    background: #ffffff !important;
+    border: 5px solid #000000 !important;
+    box-shadow: 15px 15px 0px 0px #000000 !important;
+    padding: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
   .text-area {
-    flex: 0.8;
+    flex: 0.8 !important;
   }
   .highlight-card {
-    background: white;
-    border: 4px solid #000000;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 8px 8px 0px 0px #000000;
-    font-weight: bold;
+    background: white !important;
+    border: 4px solid #000000 !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+    box-shadow: 8px 8px 0px 0px #000000 !important;
+    font-weight: bold !important;
   }
   img { 
-    max-height: 400px; 
-    object-fit: contain;
-    border: 3px solid #000000;
+    max-height: 400px !important; 
+    object-fit: contain !important;
+    border: 3px solid #000000 !important;
   }
   .badge {
-    display: inline-block;
-    padding: 5px 15px;
-    background: #0000FF;
-    color: white;
-    border: 3px solid #000000;
-    font-weight: 900;
-    margin-bottom: 10px;
-    box-shadow: 5px 5px 0px 0px #000000;
-    text-transform: uppercase;
+    display: inline-block !important;
+    padding: 5px 15px !important;
+    background: #0000FF !important;
+    color: white !important;
+    border: 3px solid #000000 !important;
+    font-weight: 900 !important;
+    margin-bottom: 10px !important;
+    box-shadow: 5px 5px 0px 0px #000000 !important;
+    text-transform: uppercase !important;
   }
   footer {
-    font-weight: 900;
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 0.8em;
+    font-weight: 900 !important;
+    color: #000000 !important;
+    text-transform: uppercase !important;
+    font-size: 0.8em !important;
   }
   header {
-    font-weight: 900;
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 0.8em;
+    font-weight: 900 !important;
+    color: #000000 !important;
+    text-transform: uppercase !important;
+    font-size: 0.8em !important;
   }
 ---
 
