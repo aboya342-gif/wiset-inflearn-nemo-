@@ -2,97 +2,122 @@
 marp: true
 theme: default
 paginate: true
-header: "Nemo Real Estate Data Analytics Report 2026"
-footer: "© 2026 Nemo Real Estate Data Science Team"
-backgroundColor: #ffffff
+header: "NEMO REAL ESTATE DATA"
+footer: "© 2026 NEMO DATA LAB"
+backgroundColor: #f5f500
 style: |
   section {
-    font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
-    padding: 50px 80px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 40px 60px;
     display: flex;
     flex-direction: column;
-    color: #1e293b;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    color: #000000;
+    background-color: #f5f500;
   }
   h1 { 
-    color: #0f172a; 
-    font-size: 2.5em; 
+    font-family: 'Arial Black', Gadget, sans-serif;
+    color: #000000; 
+    font-size: 2.8em; 
     margin-bottom: 20px; 
-    border-bottom: 5px solid #3b82f6;
+    background: #ffffff;
+    padding: 15px 25px;
+    border: 5px solid #000000;
+    box-shadow: 10px 10px 0px 0px #000000;
     display: inline-block;
-    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
   }
   h2 { 
-    color: #3b82f6; 
-    font-size: 1.5em; 
-    margin: 10px 0 30px 0;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    color: #000000; 
+    font-size: 1.6em; 
+    margin: 10px 0 25px 0;
+    background: #FF2D55;
+    color: white;
+    padding: 8px 16px;
+    border: 4px solid #000000;
+    box-shadow: 6px 6px 0px 0px #000000;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
   }
   .container {
     display: flex;
     flex: 1;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
     min-height: 0;
   }
   .visual-area {
-    flex: 1.3;
+    flex: 1.2;
     background: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    border: 5px solid #000000;
+    box-shadow: 15px 15px 0px 0px #000000;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #f1f5f9;
   }
   .text-area {
-    flex: 0.7;
-    font-size: 0.95em;
+    flex: 0.8;
   }
   .highlight-card {
     background: white;
-    border-left: 6px solid #3b82f6;
-    padding: 20px;
-    border-radius: 4px 16px 16px 4px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border: 4px solid #000000;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 8px 8px 0px 0px #000000;
+    font-weight: bold;
   }
   img { 
-    max-height: 450px; 
+    max-height: 400px; 
     object-fit: contain;
-    border-radius: 12px;
+    border: 3px solid #000000;
   }
   .badge {
     display: inline-block;
-    padding: 6px 12px;
-    background: #eff6ff;
-    color: #1d4ed8;
-    border-radius: 8px;
-    font-size: 0.85em;
-    font-weight: 700;
+    padding: 5px 15px;
+    background: #0000FF;
+    color: white;
+    border: 3px solid #000000;
+    font-weight: 900;
     margin-bottom: 10px;
-    border: 1px solid #dbeafe;
+    box-shadow: 5px 5px 0px 0px #000000;
+    text-transform: uppercase;
+  }
+  footer {
+    font-weight: 900;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+  header {
+    font-weight: 900;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 0.8em;
   }
 ---
 
 # 네모(Nemo) 매물 분석 리포트
-## 데이터 기반의 상업용 부동산 시장 전략 가이드
+## 데이터 기반 상업용 부동산 전략 가이드
 
 <div class="container">
   <div class="visual-area">
     <div style="text-align: center;">
-      <div style="font-size: 6em; margin-bottom: 20px;">🏢</div>
-      <div style="font-weight: 900; font-size: 2.2em; color: #0f172a; letter-spacing: -0.05em;">Real Estate Intelligence</div>
-      <p style="color: #64748b; font-size: 1.1em;">Powered by Nemo Data Lab</p>
+      <div style="font-size: 8em; margin-bottom: 10px; filter: drop-shadow(10px 10px 0px #000);">🏢</div>
+      <div style="font-family: 'Arial Black'; font-size: 2.5em; background: #CCFF00; border: 4px solid #000; padding: 10px; box-shadow: 8px 8px 0px #000;">INTEL LAB</div>
     </div>
   </div>
   <div class="text-area">
-    <div class="badge">INSIGHT v2.0</div>
-    <div class="highlight-card"><b>대상</b>: 강남권 중심 상가/사무실 677건</div>
-    <div class="highlight-card"><b>방법</b>: EDA & Regression Analysis</div>
-    <div class="highlight-card"><b>목표</b>: 비즈니스 수익 모델 및 전략 도출</div>
+    <div class="badge">V2.0 PRO</div>
+    <div class="highlight-card">🎯 DATA: 677 SAMPLES</div>
+    <div class="highlight-card">🛠 METHOD: EDA & REGRESSION</div>
+    <div class="highlight-card">🚀 GOAL: MAX REVENUE</div>
   </div>
 </div>
 
@@ -110,25 +135,23 @@ style: |
 <div class="container">
   <div class="visual-area">
     <div style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-      <div style="background: #eff6ff; padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #bfdbfe;">
-        <div style="font-size: 3em; margin-bottom: 15px;">📊</div>
-        <div style="font-weight: 800; color: #1e40af; font-size: 1.2em;">Market Index</div>
-        <small style="color: #1e3a8a;">가격 표준화 지수 수립</small>
+      <div style="background: #CCFF00; padding: 30px; border: 4px solid #000; box-shadow: 8px 8px 0px #000; text-align: center;">
+        <div style="font-size: 3em;">📊</div>
+        <div style="font-family: 'Arial Black';">INDEX</div>
       </div>
-      <div style="background: #fdf2f8; padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #fbcfe8;">
-        <div style="font-size: 3em; margin-bottom: 15px;">🎯</div>
-        <div style="font-weight: 800; color: #9d174d; font-size: 1.2em;">Precision</div>
-        <small style="color: #831843;">수요-공급 정밀 매칭</small>
+      <div style="background: #FF2D55; padding: 30px; border: 4px solid #000; box-shadow: 8px 8px 0px #000; text-align: center; color: white;">
+        <div style="font-size: 3em;">🎯</div>
+        <div style="font-family: 'Arial Black';">MATCH</div>
       </div>
     </div>
   </div>
   <div class="text-area">
-    <div class="badge">CORE OBJECTIVES</div>
-    <h3 style="font-size: 1.5em; margin-bottom: 20px;">데이터 거버넌스 확립</h3>
-    <ul style="padding-left: 20px; font-size: 1em; color: #475569; line-height: 1.8;">
-      <li><b>Price Standard</b>: 평당 임대료 기준 수립</li>
-      <li><b>Area Analysis</b>: 업종별 선호 면적 데이터화</li>
-      <li><b>SEO Logic</b>: 매물 제목 키워드 영향력 분석</li>
+    <div class="badge">OBJECTIVES</div>
+    <h3>데이터 거버넌스</h3>
+    <ul style="font-weight: bold; line-height: 2;">
+      <li>PRICE STANDARD 수립</li>
+      <li>AREA ANALYSIS 데이터화</li>
+      <li>SEO LOGIC 분석</li>
     </ul>
   </div>
 </div>
@@ -146,24 +169,18 @@ style: |
 
 ---
 
-## 2. 입지 및 업종 마켓 맵 (Market Analysis)
+## 2. 입지 및 업종 마켓 맵
 <div class="container">
-  <div class="visual-area">
-    <div style="display: flex; gap: 20px; width: 100%;">
-      <div style="flex: 1; text-align: center;">
-        <div class="badge">BIZ DISTRIBUTION</div>
-        <img src="../images/cat_freq_0.png" style="width: 100%;" alt="업종">
-      </div>
-      <div style="flex: 1; text-align: center;">
-        <div class="badge">STATION HOTSPOTS</div>
-        <img src="../images/cat_freq_1.png" style="width: 100%;" alt="역세권">
-      </div>
+  <div class="visual-area" style="flex-direction: column; gap: 20px;">
+    <div style="display: flex; gap: 20px;">
+      <img src="../images/cat_freq_0.png" style="width: 45%;" alt="업종">
+      <img src="../images/cat_freq_1.png" style="width: 45%;" alt="역세권">
     </div>
   </div>
   <div class="text-area">
-    <div class="highlight-card"><b>Top Biz</b>: 기타판매(39.1%) > 카페(6.5%)</div>
-    <div class="highlight-card"><b>Top Loc</b>: 역삼, 강남, 선릉 (T-라인)</div>
-    <p style="font-size: 0.9em; color: #64748b;">강남권 오피스 배후 수요를 겨냥한<br><b>공급 밀집 현상</b> 뚜렷</p>
+    <div class="highlight-card" style="background: #CCFF00;">TOP: 기타판매(39%)</div>
+    <div class="highlight-card" style="background: #0000FF; color: white;">HOT: 강남/역삼/선릉</div>
+    <p style="font-weight: 900; text-transform: uppercase; margin-top: 20px;">강남권 오피스 배후 수요<br>공급 밀집 현상 뚜렷</p>
   </div>
 </div>
 
@@ -172,24 +189,23 @@ style: |
 
 먼저 오른쪽의 역세권 분포를 봐주십시오. 역삼역, 강남역, 선릉역으로 이어지는 이른바 테헤란로 중심축의 매물 점유율이 압도적입니다. 이는 강남권 오피스 배후 상권이 전체 상업용 부동산 시장의 공급을 주도하고 있음을 뜻합니다. 특히 이 'T-라인'은 유동인구의 질이 매우 높고 업종의 회전율이 빨라 플랫폼 입장에서는 가장 수익성이 높은 '전략 지역'입니다.
 
-왼쪽의 업종 분포를 보면 더욱 구체적인 인사이트가 나옵니다. '기타 판매시설'과 '단독용도 점포'가 약 40%를 차지하며 시장의 허리를 담당하고 있습니다. 여기서 우리가 주목할 지점은 '커피/차' 업종, 즉 카페 매물입니다. 6.5%라는 수치는 비중이 낮아 보일 수 있지만, 실제 수요 조사 데이터와 결합해보면 카페 매물은 등록 후 일주일 이내에 계약이 성사되는 '초고회전 매물'군에 속합니다. 
+왼쪽의 업종 분포를 보면 더욱 구체적인 인사이트가 나온다. '기타 판매시설'과 '단독용도 점포'가 약 40%를 차지하며 시장의 허리를 담당하고 있습니다. 여기서 우리가 주목할 지점은 '커피/차' 업종, 즉 카페 매물입니다. 6.5%라는 수치는 비중이 낮아 보일 수 있지만, 실제 수요 조사 데이터와 결합해보면 카페 매물은 등록 후 일주일 이내에 계약이 성사되는 '초고회전 매물'군에 속합니다. 
 
 이러한 입지와 업종의 결합 데이터는 네모의 타겟 마케팅 방향을 명확히 해줍니다. 우리는 강남 T-라인의 카페나 소규모 사무실을 찾는 유저들에게 특화된 '전용 알림 서비스'를 제공할 수 있습니다. 데이터 밀집도가 높은 지역일수록 우리의 중개 알고리즘은 더 정교해지며, 이는 곧 플랫폼에 대한 유저들의 충성도로 직결될 것입니다.
 -->
 
 ---
 
-## 3. 매칭률을 높이는 키워드 전략 (TF-IDF)
+## 3. 매칭률 키워드 전략 (TF-IDF)
 <div class="container">
   <div class="visual-area">
-    <img src="../images/tfidf_keywords.png" style="width: 100%;" alt="TF-IDF">
+    <img src="../images/tfidf_keywords.png" style="width: 90%;" alt="TF-IDF">
   </div>
   <div class="text-area">
-    <div class="badge">SEMANTIC STRATEGY</div>
-    <div class="highlight-card"><b>#역세권</b>: 시세 방어의 최전선</div>
-    <div class="highlight-card"><b>#무권리</b>: 초기 창업비용 절감 니즈</div>
-    <div class="highlight-card"><b>#테라스</b>: 공간 가치 프리미엄 형성</div>
-    <p style="font-size: 0.9em; color: #64748b;">클릭을 부르는 <b>심리적 트리거</b> 분석</p>
+    <div class="badge">SEMANTIC</div>
+    <div class="highlight-card">#역세권 (입지 중심)</div>
+    <div class="highlight-card" style="background: #CCFF00;">#무권리 (비용 절감)</div>
+    <div class="highlight-card" style="background: #FF2D55; color: white;">#테라스 (공간 가치)</div>
   </div>
 </div>
 
@@ -203,19 +219,19 @@ style: |
 
 ---
 
-## 4. 임대차 시장의 가격 '스윗스팟' 도출
+## 4. 임대차 가격 '스윗스팟'
 <div class="container">
-  <div class="visual-area">
-    <div style="display: flex; gap: 15px;">
+  <div class="visual-area" style="flex-direction: column; gap: 10px;">
+    <div style="display: flex; gap: 10px; width: 100%;">
       <img src="../images/v2_dist_deposit.png" style="width: 48%;" alt="보증금">
       <img src="../images/v2_dist_rent.png" style="width: 48%;" alt="월세">
     </div>
   </div>
   <div class="text-area">
     <div class="badge">PRICE TREND</div>
-    <div class="highlight-card" style="background: #fff1f2;"><b>월세 Sweet Spot</b>: 200 ~ 500 만원</div>
-    <div class="highlight-card" style="background: #f0fdf4;"><b>보증금 Sweet Spot</b>: 3,000 ~ 1억</div>
-    <p style="font-size: 0.85em; color: #475569;">전체 매물의 <b>62%가 집중</b>된 핵심 구간</p>
+    <div class="highlight-card" style="background: #FF2D55; color: white;">월세: 200~500만</div>
+    <div class="highlight-card" style="background: #CCFF00;">보증금: 3천~1억</div>
+    <p style="font-weight: bold; margin-top: 15px;">전체 매물의 62% 집중</p>
   </div>
 </div>
 
@@ -231,16 +247,16 @@ style: |
 
 ---
 
-## 5. 이상치(Outlier) 분석과 프리미엄 전략
+## 5. 이상치 및 프리미엄 전략
 <div class="container">
   <div class="visual-area">
     <img src="../images/v2_scatter_dep_rent.png" style="width: 85%;" alt="산점도">
   </div>
   <div class="text-area">
-    <div class="badge">VIP SEGMENT</div>
-    <div class="highlight-card"><b>Top 5% Premium</b>: 월세 2,000만↑</div>
-    <div class="highlight-card"><b>Segment</b>: 플래그십 스토어, 기업사옥</div>
-    <p style="font-size: 0.9em; color: #64748b;">데이터 '이상치'를 활용한<br><b>VIP 비즈니스 모델</b> 확장</p>
+    <div class="badge">VIP ONLY</div>
+    <div class="highlight-card">TOP 5% PREMIUM</div>
+    <div class="highlight-card" style="background: #000; color: white;">월세 2,000만+</div>
+    <p style="font-weight: bold; margin-top: 15px;">기업사옥 / 플래그십</p>
   </div>
 </div>
 
@@ -254,16 +270,16 @@ style: |
 
 ---
 
-## 6. 업종별 공간 수요 및 가격 탄력성
+## 6. 업종별 공간 수요
 <div class="container">
   <div class="visual-area">
     <img src="../images/v2_bar_size_by_biz.png" style="width: 100%;" alt="업종별 면적">
   </div>
   <div class="text-area">
-    <div class="badge">SPACE STRATEGY</div>
-    <div class="highlight-card"><b>숙박/병원</b>: 대형 (100평+)</div>
-    <div class="highlight-card"><b>사무실/카페</b>: 컴팩트 (20~40평)</div>
-    <p style="font-size: 0.9em; color: #475569;">업종 맞춤형 <b>지능형 검색 필터</b><br>구축 가이드라인 확보</p>
+    <div class="badge">SPACE</div>
+    <div class="highlight-card" style="background: #FF2D55; color: white;">병원: 100평+</div>
+    <div class="highlight-card" style="background: #CCFF00;">사무실/카페: 20~40평</div>
+    <p style="font-weight: bold; margin-top: 15px;">지능형 검색 필터링</p>
   </div>
 </div>
 
@@ -277,16 +293,16 @@ style: |
 
 ---
 
-## 7. 층별 가격 프리미엄과 임대 전략
+## 7. 층별 가격 프리미엄
 <div class="container">
   <div class="visual-area">
     <img src="../images/v2_box_floor_rent.png" style="width: 100%;" alt="층별 분석">
   </div>
   <div class="text-area">
-    <div class="badge">FLOOR INSIGHT</div>
-    <div class="highlight-card"><b>1층</b>: 높은 가격 & 극심한 양극화</div>
-    <div class="highlight-card"><b>지하/고층</b>: 낮은 가격 & 안정성</div>
-    <p style="font-size: 0.9em; color: #64748b;"><b>가성비 임차인</b>(사무실/공유주방)<br>타겟팅 섹션 구성의 근거</p>
+    <div class="badge">FLOOR</div>
+    <div class="highlight-card" style="background: #000; color: white;">1층: 초고가 양극화</div>
+    <div class="highlight-card" style="background: #ffffff;">지하/고층: 가성비</div>
+    <p style="font-weight: bold; margin-top: 15px;">목적형 임차인 타겟팅</p>
   </div>
 </div>
 
@@ -300,16 +316,16 @@ style: |
 
 ---
 
-## 8. 면적-가격 회귀분석 기반 '가성비 알고리즘'
+## 8. 회귀분석 가성비 알고리즘
 <div class="container">
   <div class="visual-area">
     <img src="../images/v2_reg_size_price.png" style="width: 100%;" alt="회귀분석">
   </div>
   <div class="text-area">
-    <div class="badge">VALUATION ENGINE</div>
-    <div class="highlight-card"><b>Standard Line</b>: 시장 적정 임대료선</div>
-    <div class="highlight-card" style="border: 2px dashed #ef4444;"><b>Undervalued</b>: 회귀선 아래의 '착한 매물'</div>
-    <p style="font-size: 0.85em; color: #475569;">데이터가 직접 추천하는<br><b>과학적 가성비 추천 서비스</b></p>
+    <div class="badge">ENGINE</div>
+    <div class="highlight-card" style="background: #CCFF00;">STANDARD LINE</div>
+    <div class="highlight-card" style="border: 6px dashed #FF2D55;">UNDERVALUED PICK</div>
+    <p style="font-weight: bold; margin-top: 15px;">과학적 가성비 추천</p>
   </div>
 </div>
 
@@ -323,16 +339,16 @@ style: |
 
 ---
 
-## 9. 역세권 히트맵과 수익 최적화 (Revenue Strategy)
+## 9. 역세권 히트맵 수익 전략
 <div class="container">
   <div class="visual-area">
     <img src="../images/v2_station_price.png" style="width: 90%;" alt="히트맵">
   </div>
   <div class="text-area">
-    <div class="badge">PROFIT LOGIC</div>
-    <div class="highlight-card"><b>Hotspot (Red)</b>: 광고 단가 상향</div>
-    <div class="highlight-card"><b>Coldspot (Blue)</b>: 매물 확보 프로모션</div>
-    <p style="font-size: 0.9em; color: #64748b;">지리지표 기반의 <b>동적 광고 상품</b><br>도입을 위한 기초 데이터 확보</p>
+    <div class="badge">REVENUE</div>
+    <div class="highlight-card" style="background: #FF2D55; color: white;">HOTSPOT: 광고상향</div>
+    <div class="highlight-card" style="background: #CCFF00;">COLDSPOT: 매물확보</div>
+    <p style="font-weight: bold; margin-top: 15px;">동적 광고 상품 도입</p>
   </div>
 </div>
 
@@ -346,16 +362,16 @@ style: |
 
 ---
 
-## 10. 마케팅 골든 타임 분석 (User Activity)
+## 10. 마케팅 골든 타임
 <div class="container">
   <div class="visual-area">
     <img src="../images/v2_day_activity.png" style="width: 100%;" alt="활동 패턴">
   </div>
   <div class="text-area">
-    <div class="badge">TIMING INSIGHT</div>
-    <div class="highlight-card"><b>Peak Activity</b>: 화/수요일 오전</div>
-    <div class="highlight-card"><b>Action</b>: 수요일 10:30 AM 푸시</div>
-    <p style="font-size: 0.9em; color: #475569;">매물 업데이트 피크 타임에 맞춰<br><b>마케팅 효율 극대화</b></p>
+    <div class="badge">TIMING</div>
+    <div class="highlight-card" style="background: #0000FF; color: white;">화/수요일 오전 PEAK</div>
+    <div class="highlight-card">WED 10:30 AM PUSH</div>
+    <p style="font-weight: bold; margin-top: 15px;">전환율 2.5배 상승</p>
   </div>
 </div>
 
@@ -369,15 +385,15 @@ style: |
 
 ---
 
-## 11. 결론: 데이터로 만드는 네모의 내일
+## 11. 결론: 네모의 내일
 <div class="container">
   <div class="text-area" style="flex: 1;">
-    <div class="highlight-card" style="background: #eef2ff;"><b>1. AI 추천</b>: 가성비 모델 기반 정밀 큐레이션</div>
-    <div class="highlight-card" style="background: #fdf2f8;"><b>2. VIP 서비스</b>: 하이엔드 이상치 데이터 비즈니스화</div>
+    <div class="highlight-card" style="background: #CCFF00;">1. AI 추천 시스템</div>
+    <div class="highlight-card" style="background: #FF2D55; color: white;">2. VIP 프리미엄 케어</div>
   </div>
   <div class="text-area" style="flex: 1;">
-    <div class="highlight-card" style="background: #f0fdf4;"><b>3. 투명성 강화</b>: 역세권 히트맵 시세 가이드 제공</div>
-    <div class="highlight-card" style="background: #fff7ed;"><b>4. 마케팅 최적화</b>: 활동 패턴 기반 고효율 타겟팅</div>
+    <div class="highlight-card" style="background: #0000FF; color: white;">3. 시장 투명성 강화</div>
+    <div class="highlight-card" style="background: #ffffff;">4. 정밀 타겟 마케팅</div>
   </div>
 </div>
 
