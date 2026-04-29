@@ -8,98 +8,103 @@ backgroundColor: #f5f500
 style: |
   section {
     font-family: 'Courier New', Courier, monospace;
-    padding: 40px 60px;
-    display: flex;
-    flex-direction: column;
+    padding: 30px 50px !important;
+    display: flex !important;
+    flex-direction: column !important;
     color: #000000 !important;
     background-color: #f5f500 !important;
     background-image: none !important;
   }
   h1 { 
     font-family: 'Arial Black', Gadget, sans-serif !important;
-    color: #000000 !important; 
-    font-size: 2.8em !important; 
-    margin-bottom: 20px !important; 
+    font-size: 2.2em !important; 
+    margin: 0 0 15px 0 !important;
     background: #ffffff !important;
-    padding: 15px 25px !important;
+    padding: 10px 20px !important;
     border: 5px solid #000000 !important;
-    box-shadow: 10px 10px 0px 0px #000000 !important;
+    box-shadow: 8px 8px 0px 0px #000000 !important;
     display: inline-block !important;
     text-transform: uppercase !important;
-    line-height: 1 !important;
   }
   h2 { 
     font-family: 'Arial Black', Gadget, sans-serif !important;
     color: #ffffff !important; 
-    font-size: 1.6em !important; 
-    margin: 10px 0 25px 0 !important;
+    font-size: 1.4em !important; 
+    margin: 0 0 20px 0 !important;
     background: #FF2D55 !important;
-    padding: 8px 16px !important;
+    padding: 6px 12px !important;
     border: 4px solid #000000 !important;
-    box-shadow: 6px 6px 0px 0px #000000 !important;
+    box-shadow: 5px 5px 0px 0px #000000 !important;
     display: inline-block !important;
-    text-transform: uppercase !important;
   }
   h3 {
     font-family: 'Arial Black', Gadget, sans-serif !important;
     text-transform: uppercase !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 10px !important;
+    font-size: 1.1em !important;
   }
   .container {
     display: flex !important;
     flex: 1 !important;
-    gap: 30px !important;
-    align-items: center !important;
+    gap: 20px !important;
     min-height: 0 !important;
+    overflow: hidden !important;
   }
   .visual-area {
-    flex: 1.2 !important;
+    flex: 1 !important;
     background: #ffffff !important;
-    border: 5px solid #000000 !important;
-    box-shadow: 15px 15px 0px 0px #000000 !important;
-    padding: 20px !important;
+    border: 4px solid #000000 !important;
+    box-shadow: 10px 10px 0px 0px #000000 !important;
+    padding: 15px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    min-width: 0 !important;
   }
   .text-area {
     flex: 0.8 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
   }
   .highlight-card {
     background: white !important;
-    border: 4px solid #000000 !important;
-    padding: 15px !important;
-    margin-bottom: 15px !important;
-    box-shadow: 8px 8px 0px 0px #000000 !important;
+    border: 3px solid #000000 !important;
+    padding: 12px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 6px 6px 0px 0px #000000 !important;
     font-weight: bold !important;
+    font-size: 0.9em !important;
   }
   img { 
-    max-height: 400px !important; 
+    max-width: 100% !important;
+    max-height: 100% !important;
     object-fit: contain !important;
-    border: 3px solid #000000 !important;
+    border: 2px solid #000000 !important;
   }
   .badge {
     display: inline-block !important;
-    padding: 5px 15px !important;
+    padding: 4px 10px !important;
     background: #0000FF !important;
     color: white !important;
-    border: 3px solid #000000 !important;
+    border: 2px solid #000000 !important;
     font-weight: 900 !important;
-    margin-bottom: 10px !important;
-    box-shadow: 5px 5px 0px 0px #000000 !important;
-    text-transform: uppercase !important;
+    margin-bottom: 8px !important;
+    box-shadow: 4px 4px 0px 0px #000000 !important;
+    font-size: 0.8em !important;
   }
   footer {
     font-weight: 900 !important;
     color: #000000 !important;
-    text-transform: uppercase !important;
-    font-size: 0.8em !important;
+    font-size: 0.7em !important;
+    bottom: 10px !important;
+    left: 20px !important;
   }
   header {
     font-weight: 900 !important;
     color: #000000 !important;
-    text-transform: uppercase !important;
-    font-size: 0.8em !important;
+    font-size: 0.7em !important;
+    top: 10px !important;
   }
 ---
 
